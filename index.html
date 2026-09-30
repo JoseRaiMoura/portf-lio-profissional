@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>José Raí — Currículo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+(function(){
+  var systemReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // true = sempre animar, ignorando "movimento reduzido" do sistema
+  var ALWAYS_ANIMATE = false;
+  var force = ALWAYS_ANIMATE || /[?&]motion=on/.test(location.search);
+  try { if (localStorage.getItem("forceMotion") === "1") force = true; } catch (e) {}
+  window.__systemReduced = systemReduced;
+  window.__reduceMotion = systemReduced && !force;
+  if (systemReduced && force) document.documentElement.classList.add("force-motion");
+})();
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- barra de progresso de leitura -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- navegação fixa -->
+<nav class="topnav" id="topnav">
+  <a class="brand" href="#topo" data-magnetic>JR<span>.</span></a>
+  <ul class="nav-links">
+    <span class="nav-pill" id="navPill" aria-hidden="true"></span>
+    <li><a href="#sobre" data-magnetic data-nav>Sobre</a></li>
+    <li><a href="#formacao" data-magnetic data-nav>Formação</a></li>
+    <li><a href="#conquistas" data-magnetic data-nav>Conquistas</a></li>
+    <li><a href="#experiencia" data-magnetic data-nav>Experiência</a></li>
+    <li><a href="#projetos" data-magnetic data-nav>Projetos</a></li>
+    <li><a href="#contato" data-magnetic data-nav>Contato</a></li>
+  </ul>
+  <a class="nav-cta" href="mailto:raijose279@gmail.com" data-magnetic>Fale comigo</a>
+</nav>
+
+<div class="page" id="topo">
+
+  <!-- barra lateral -->
+  <aside class="sidebar">
+    <canvas id="particles" class="particles"></canvas>
+    <div id="cubeStage" class="full-container" aria-hidden="true"></div>
+    <div class="aurora aurora-a" aria-hidden="true"></div>
+    <div class="aurora aurora-b" aria-hidden="true"></div>
+
+    <div class="identity" data-reveal>
+      <div class="photo-wrap">
+        <div class="photo">
+          <div class="photo-ring"></div>
+          <img src="foto5.jpg" alt="Foto de José Raí Moura" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <span style="display:none;">JR</span>
+        </div>
+      </div>
+      <h1>José Raí<br>Moura</h1>
+      <p class="role">
+        <span id="roleText"></span><span class="type-cursor">|</span>
+      </p>
+
+      <div class="status-row">
+        <div class="status-pill">
+          <span class="status-dot"></span> Disponível para oportunidades
+        </div>
+
+        <div class="ticker-dial" aria-hidden="true">
+          <span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span>
+          <span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span>
+          <span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span>
+          <span class="ticker"></span>
+        </div>
+      </div>
+    </div>
+
+    <section class="side-block" aria-labelledby="contato-titulo" data-reveal>
+      <h2 id="contato-titulo">Contato</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="label">E-mail</span>
+          <a href="mailto:raijose279@gmail.com" data-magnetic>raijose279@gmail.com</a>
+          <button type="button" class="copy-btn" data-copy="raijose279@gmail.com">Copiar e-mail</button>
+        </li>
+        <li>
+          <span class="label">Telefone</span>
+          <a href="tel:+5591985058322" data-magnetic>(91) 98505-8322</a>
+        </li>
+        <li>
+          <span class="label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/jos%C3%A9-ra%C3%AD/" target="_blank" rel="noopener noreferrer" data-magnetic>linkedin.com/in/josé-raí</a>
+        </li>
+        <li>
+          <span class="label">GitHub</span>
+          <a href="https://github.com/JoseRaiMoura" target="_blank" rel="noopener noreferrer" data-magnetic>github.com/JoseRaiMoura</a>
+        </li>
+        <li>
+          <span class="label">Local</span>
+          <span>Curuçá, PA — Brasil</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="side-block" aria-labelledby="habilidades-titulo" data-reveal>
+      <h2 id="habilidades-titulo">Habilidades técnicas</h2>
+      <ul class="skill-list">
+        <li>
+          <div class="skill-row"><span>HTML &amp; CSS</span><span class="skill-percent">Avançado</span></div>
+          <div class="skill-track"><div class="skill-fill" data-level="95"></div></div>
+        </li>
+        <li>
+          <div class="skill-row"><span>JavaScript</span><span class="skill-percent">Intermediário</span></div>
+          <div class="skill-track"><div class="skill-fill" data-level="75"></div></div>
+        </li>
+        <li>
+          <div class="skill-row"><span>Git &amp; GitHub</span><span class="skill-percent">Intermediário</span></div>
+          <div class="skill-track"><div class="skill-fill" data-level="75"></div></div>
+        </li>
+        <li>
+          <div class="skill-row"><span>Python</span><span class="skill-percent">Intermediário</span></div>
+          <div class="skill-track"><div class="skill-fill" data-level="55"></div></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="side-block" aria-labelledby="interpessoais-titulo" data-reveal>
+      <h2 id="interpessoais-titulo">Habilidades interpessoais</h2>
+      <ul class="tag-list">
+        <li>Comunicação</li>
+        <li>Trabalho em equipe</li>
+        <li>Organização</li>
+        <li>Proatividade</li>
+        <li>Resolução de problemas</li>
+      </ul>
+    </section>
+
+    <section class="side-block" aria-labelledby="idiomas-titulo" data-reveal>
+      <h2 id="idiomas-titulo">Idiomas</h2>
+      <ul class="tag-list">
+        <li>Português — nativo</li>
+        <li>Inglês — básico</li>
+      </ul>
+    </section>
+  </aside>
+
+  <!-- conteúdo principal -->
+  <main class="content">
+
+    <section id="sobre" class="block" data-reveal aria-labelledby="sobre-titulo">
+      <h2 id="sobre-titulo"><span class="square" aria-hidden="true"></span><span class="index">01</span>Sobre mim</h2>
+      <p>
+        Sou estudante de Análise e Desenvolvimento de Sistemas com interesse
+        especial em interfaces web, cibersegurança e experiência do usuário.
+        Gosto de transformar ideias simples em páginas claras e bem organizadas,
+        e estou construindo este currículo online como parte do meu portfólio
+        de projetos práticos. Busco minha primeira oportunidade como
+        desenvolvedor front-end, onde possa aprender continuamente e contribuir
+        com atenção a detalhes.
+      </p>
+    </section>
+
+    <section id="formacao" class="block" data-reveal aria-labelledby="formacao-titulo">
+      <h2 id="formacao-titulo"><span class="square" aria-hidden="true"></span><span class="index">02</span>Formação acadêmica</h2>
+
+      <div class="timeline">
+        <svg class="timeline-line" viewBox="0 0 2 100" preserveAspectRatio="none" aria-hidden="true"><line x1="1" y1="0" x2="1" y2="100"></line></svg>
+
+        <article class="entry" data-reveal>
+        <div class="entry-head">
+          <h3>Análise e Desenvolvimento de Sistemas</h3>
+          <span class="period">2026 — 2028 (cursando)</span>
+        </div>
+        <p class="entry-sub">Estácio</p>
+        <p>
+          Curso superior com foco em lógica de programação, banco de dados,
+          desenvolvimento web e engenharia de software.
+        </p>
+      </article>
+
+      <article class="entry" data-reveal>
+        <div class="entry-head">
+          <h3>Curso Técnico em Desenvolvimento de Sistemas</h3>
+          <span class="period">2023 — 2025</span>
+        </div>
+        <p class="entry-sub">Ensino Médio — EETEPA Maria de Nazaré Guimarães Macedo</p>
+      </article>
+
+      <article class="entry" data-reveal>
+        <div class="entry-head">
+          <h3>Introdução ao Uso de Geotecnologias e Produção de Mapas (60h)</h3>
+          <span class="period">2026</span>
+        </div>
+        <p class="entry-sub">
+          Capacitação no uso de geotecnologias e produção de mapas, desenvolvendo
+          conhecimentos em análise espacial, interpretação de dados geográficos
+          e representação cartográfica.
+        </p>
+      </article>
+
+      <article class="entry" data-reveal>
+        <div class="entry-head">
+          <h3>Introdução à Cibersegurança — Cisco Networking Academy (6h)</h3>
+          <span class="period">2026</span>
+        </div>
+        <p class="entry-sub">Curso complementar de cibersegurança.</p>
+      </article>
+
+      <article class="entry" data-reveal>
+        <div class="entry-head">
+          <h3>Ética na Era da IA (2h)</h3>
+          <span class="period">2026</span>
+        </div>
+        <p class="entry-sub">
+          Desenvolvimento de conhecimentos sobre ética, responsabilidade e uso
+          consciente da Inteligência Artificial, considerando seus impactos na
+          sociedade e no ambiente profissional.
+        </p>
+      </article>
+
+      <article class="entry" data-reveal>
+        <div class="entry-head">
+          <h3>IA na Prática: Como Dados Bem Estruturados Fazem Diferença (2h)</h3>
+          <span class="period">2026</span>
+        </div>
+        <p class="entry-sub">
+          Desenvolvimento de conhecimentos sobre organização e estruturação de
+          dados, destacando sua importância para o funcionamento eficiente e a
+          aplicação prática da Inteligência Artificial.
+        </p>
+      </article>
+      </div>
+    </section>
+
+    <section id="conquistas" class="block" data-reveal aria-labelledby="conquistas-titulo">
+      <h2 id="conquistas-titulo"><span class="square" aria-hidden="true"></span><span class="index">03</span>Conquistas acadêmicas</h2>
+
+      <div class="timeline">
+        <svg class="timeline-line" viewBox="0 0 2 100" preserveAspectRatio="none" aria-hidden="true"><line x1="1" y1="0" x2="1" y2="100"></line></svg>
+
+        <article class="entry" data-reveal>
+        <div class="entry-head">
+          <h3>Medalha de Prata — 10ª Olimpíada Brasileira de Geografia (OBG), regional Pará (128h)</h3>
+          <span class="period">2025</span>
+        </div>
+        <p class="entry-sub">Fase online nacional</p>
+        <p>
+          Graças à participação no curso de Introdução ao Uso de Geotecnologias
+          e Produção de Mapas e aos conhecimentos obtidos nele, foi possível
+          alcançar a medalha de prata na classificação regional.
+        </p>
+      </article>
+
+      <article class="entry" data-reveal>
+        <div class="entry-head">
+          <h3>Apresentação de projeto na 4ª Feira do Livro de Castanhal (6h)</h3>
+          <span class="period">2025</span>
+        </div>
+        <p>
+          Participação com apresentação de projeto sobre o tema "A importância
+          da leitura e da escrita na formação do cidadão".
+        </p>
+      </article>
+      </div>
+    </section>
+
+    <section id="experiencia" class="block" data-reveal aria-labelledby="experiencia-titulo">
+      <h2 id="experiencia-titulo"><span class="square" aria-hidden="true"></span><span class="index">04</span>Experiência profissional</h2>
+
+      <article class="entry" data-reveal>
+        <div class="entry-head">
+          <h3>Estagiário de Suporte de TI</h3>
+          <span class="period">jan 2026 — atual</span>
+        </div>
+        <p class="entry-sub">Prefeitura Municipal de Curuçá</p>
+        <p>
+          Atendimento a usuários internos, manutenção básica de computadores e
+          apoio na organização de arquivos digitais do setor administrativo.
+        </p>
+      </article>
+    </section>
+
+    <section id="projetos" class="block" data-reveal aria-labelledby="projetos-titulo">
+      <h2 id="projetos-titulo"><span class="square" aria-hidden="true"></span><span class="index">05</span>Projetos desenvolvidos</h2>
+
+      <div class="project-grid">
+        <article class="project-card" data-tilt data-reveal>
+          <div class="card-glow"></div>
+          <span class="project-tag">Web</span>
+          <h3>Currículo Online</h3>
+          <p>Site pessoal em HTML, CSS e JavaScript, publicado no GitHub Pages como parte de um trabalho prático de desenvolvimento web.</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" data-magnetic>Ver repositório <span class="arrow">→</span></a>
+        </article>
+
+        <article class="project-card" data-tilt data-reveal>
+          <div class="card-glow"></div>
+          <span class="project-tag">C</span>
+          <h3>Sistema de Medicamentos</h3>
+          <p>Programa em linguagem C para cadastro de medicamentos, armazenando dias, horários, quantidade e miligramagem.</p>
+          <a href="https://github.com/JoseRaiMoura/sistema-de-medicamentos" target="_blank" rel="noopener noreferrer" data-magnetic>Ver repositório <span class="arrow">→</span></a>
+        </article>
+
+        <article class="project-card" data-tilt data-reveal>
+          <div class="card-glow"></div>
+          <span class="project-tag">Web</span>
+          <h3>Landing Page com Efeito Parallax</h3>
+          <p>Landing page feita apenas com HTML e CSS, explorando o efeito parallax na rolagem da página.</p>
+          <a href="https://github.com/JoseRaiMoura/Landing-Page-com-Efeito-Parallax-HTML-CSS-" target="_blank" rel="noopener noreferrer" data-magnetic>Ver repositório <span class="arrow">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato" class="block contact-cta" data-reveal aria-labelledby="contato-cta-titulo">
+      <div class="cta-dots" id="ctaDots" aria-hidden="true"></div>
+      <h2 id="contato-cta-titulo"><span class="square" aria-hidden="true"></span><span class="index">06</span>Vamos conversar?</h2>
+      <p>Estou em busca da minha primeira oportunidade como desenvolvedor. Se meu perfil combina com o que você procura, entre em contato.</p>
+      <a class="big-cta" href="mailto:raijose279@gmail.com" data-magnetic>
+        Enviar um e-mail <span class="arrow">→</span>
+      </a>
+    </section>
+
+    <div class="divider-row" aria-hidden="true">
+        <span class="divider-square"></span>
+        <span class="divider-square"></span>
+        <span class="divider-square"></span>
+        <span class="divider-square"></span>
+        <span class="divider-square"></span>
+        <span class="divider-square"></span>
+        <span class="divider-square"></span>
+        <span class="divider-square"></span>
+        <span class="divider-square"></span>
+        <span class="divider-square"></span>
+        <span class="divider-square"></span>
+    </div>
+
+    <footer class="site-footer">
+      <p>José Raí De Oliveira Moura — Currículo online desenvolvido em HTML, CSS e JavaScript.</p>
+      <button class="to-top" id="toTop" aria-label="Voltar ao topo" data-magnetic>↑</button>
+    </footer>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+
+<!-- Anime.js -->
+<script src="https://cdn.jsdelivr.net/npm/animejs@4/lib/anime.iife.min.js"></script>
+<script src="animejs-extras.js"></script>
+
+<!-- cubos 3D -->
+<script type="module" src="cube-grid.js"></script>
+</body>
+</html>
